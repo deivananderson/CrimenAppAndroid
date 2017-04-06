@@ -1,6 +1,7 @@
 package co.edu.pdam.eci.crimenapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -29,6 +30,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap googleMap;
     private GoogleApiClient googleApiClient;
     private final LocationRequest locationRequest = new LocationRequest();
+
+    private Double latitud, longitud;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +67,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void registrarCrimen(View view) {
+        Intent intent = new Intent(this,MainActivity.class);
+        if (latitud != null && longitud != null){
+            intent.putExtra("latitud",latitud);
+            intent.putExtra("longitud",longitud);
+            startActivity(intent);
+        }
 
     }
 
@@ -143,6 +152,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onLocationChanged(Location location) {
                 showMyLocation();
                 stopLocationUpdates();
+                latitud=location.getLatitude();
+                longitud=location.getLongitude();
             }
         });
     }

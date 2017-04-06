@@ -44,10 +44,17 @@ public class MainActivity extends AppCompatActivity {
     EditText sender, message;
     Button sendButton;
 
+    private Double latitud, longitud;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        latitud = (Double)intent.getSerializableExtra("latitud");
+        longitud = (Double)intent.getSerializableExtra("longitud");
+
 
         sender = (EditText) findViewById(R.id.sender);
         message = (EditText) findViewById(R.id.message);

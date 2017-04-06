@@ -30,14 +30,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:hint="@string/name" />
+            android:hint="Situacion" />
 
         <EditText
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:hint="@string/write_message" />
+            android:hint="Comentario" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,14 +51,18 @@
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:onClick="onSendPhoto"
-                android:text="@string/send_photo" />
+                android:text="Tomar Foto"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorTextWhile"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onSendClicked"
-                android:text="@string/send_message" />
+                android:text="Reportar"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorTextWhile"/>
 
         </LinearLayout>
     </LinearLayout>
