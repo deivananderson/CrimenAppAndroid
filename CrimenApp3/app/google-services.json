@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "813601765574",
-    "firebase_url": "https://lab07-74361.firebaseio.com",
-    "project_id": "lab07-74361",
-    "storage_bucket": "lab07-74361.appspot.com"
+    "project_number": "92229770410",
+    "firebase_url": "https://crimenapp-15fed.firebaseio.com",
+    "project_id": "crimenapp-15fed",
+    "storage_bucket": "crimenapp-15fed.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:813601765574:android:4388ab628b64178d",
+        "mobilesdk_app_id": "1:92229770410:android:42ebe4987074e7ee",
         "android_client_info": {
-          "package_name": "co.edu.pdam.eci.chatapp"
+          "package_name": "co.edu.pdam.eci.crimenapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "813601765574-gcofm07t3bccp90krc17l137dh3ebcnh.apps.googleusercontent.com",
+          "client_id": "92229770410-d3m49pcaclm7uqekn373ro6ndkithvgq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyClNRrmdlJuFPf2xtq85N2FkbriRVwrY64"
+          "current_key": "AIzaSyAqx9Zs4fcN2fPJ5fQqf_rkfE_ZVRFX_0A"
         }
       ],
       "services": {

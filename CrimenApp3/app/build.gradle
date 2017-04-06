@@ -4,12 +4,13 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "co.edu.pdam.eci.chatapp"
+        applicationId "co.edu.pdam.eci.crimenapp"
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -34,6 +35,9 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:10.2.0'
     compile 'com.google.firebase:firebase-storage:10.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    //compile 'com.google.android.gms:play-services:10.2.0'
+    compile 'com.google.android.gms:play-services-maps:10.2.0'
+    compile 'com.google.android.gms:play-services-location:10.2.0'
     testCompile 'junit:junit:4.12'
 }
 

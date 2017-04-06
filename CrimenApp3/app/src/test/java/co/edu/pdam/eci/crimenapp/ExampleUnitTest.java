@@ -1,4 +1,4 @@
-package co.edu.pdam.eci.chatapp;
+package co.edu.pdam.eci.crimenapp;
 
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
@@ -8,56 +9,59 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="co.edu.pdam.eci.chatapp.LoginActivity">
-
+    tools:context="co.edu.pdam.eci.crimenapp.LoginActivity">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:text="@string/txt_username"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lbl_username" />
+            app:srcCompat="@drawable/logo"
+            android:id="@+id/imageView" />
 
         <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
             android:id="@+id/txt_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="103dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:text="@string/txt_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lbl_password" />
+            android:hint="Email"
+            android:textColor="@color/colorPrimaryDark"
+            />
 
         <EditText
-            android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/txt_username"
-            android:layout_alignStart="@+id/txt_username"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginTop="21dp"
+            android:inputType="textPassword"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:id="@+id/txt_password"
+            android:hint="password" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <Button
-            android:id="@+id/btn_login"
+            android:text="Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/relativeLayout"
-            android:layout_marginTop="161dp"
-            android:text="@string/txt_login" />
+            android:id="@+id/btn_login"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextWhile"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:text="Registry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Register"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextWhile"/>
     </LinearLayout>
 </RelativeLayout>

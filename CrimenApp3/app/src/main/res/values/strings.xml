@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ChatApp</string>
+    <string name="app_name">CrimenApp</string>
     <string name="txt_username">Username</string>
     <string name="txt_password">Password</string>
     <string name="txt_login">Login</string>
@@ -7,4 +7,6 @@
     <string name="write_message">Escribir mensaje</string>
     <string name="send_photo">Enviar foto</string>
     <string name="send_message">Enviar</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="button">Registrar Crimen</string>
 </resources>

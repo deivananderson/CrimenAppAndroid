@@ -1,4 +1,4 @@
-package co.edu.pdam.eci.chatapp;
+package co.edu.pdam.eci.crimenapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements FirebaseAuth.Aut
     public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if (user != null) {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, MapsActivity.class));
             finish();
         }
     }

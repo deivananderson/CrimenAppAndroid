@@ -1,4 +1,4 @@
-package co.edu.pdam.eci.chatapp.adapter;
+package co.edu.pdam.eci.crimenapp.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -15,8 +15,8 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import co.edu.pdam.eci.chatapp.R;
-import co.edu.pdam.eci.chatapp.model.Message;
+import co.edu.pdam.eci.crimenapp.R;
+import co.edu.pdam.eci.crimenapp.model.Message;
 
 /**
  * @author Santiago Carrillo

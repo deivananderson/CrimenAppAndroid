@@ -1,4 +1,4 @@
-package co.edu.pdam.eci.chatapp.model;
+package co.edu.pdam.eci.crimenapp.model;
 
 /**
  * Created by Julian Gonzalez Prieto (Avuuna la Luz del Alba) on 3/30/17.

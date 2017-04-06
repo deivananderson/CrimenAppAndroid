@@ -1,4 +1,4 @@
-package co.edu.pdam.eci.chatapp;
+package co.edu.pdam.eci.crimenapp;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -26,8 +26,8 @@ import com.google.firebase.storage.UploadTask;
 import java.io.ByteArrayOutputStream;
 import java.util.UUID;
 
-import co.edu.pdam.eci.chatapp.adapter.MessagesAdapter;
-import co.edu.pdam.eci.chatapp.model.Message;
+import co.edu.pdam.eci.crimenapp.adapter.MessagesAdapter;
+import co.edu.pdam.eci.crimenapp.model.Message;
 
 public class MainActivity extends AppCompatActivity {
 
