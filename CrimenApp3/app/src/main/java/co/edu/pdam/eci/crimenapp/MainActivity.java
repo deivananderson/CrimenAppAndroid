@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     Button sendButton;
 
     private Double latitud, longitud;
+    private String urlImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +93,15 @@ public class MainActivity extends AppCompatActivity {
         Message msg = new Message();
         msg.setMessage(message.getText().toString());
         msg.setUser(sender.getText().toString());
+        msg.setLatitud(latitud);
+        msg.setLongitud(longitud);
+        msg.setImageUrl(this.urlImage);
         databaseReference.push().setValue(msg);
+
+        // Resetear datos
+        msg.setMessage("");
+        msg.setUser("");
+        msg.setImageUrl("");
     }
 
     private void configureRecyclerView() {
@@ -145,12 +154,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void masDetalle(View view) {
+
+        System.out.println("detalles");
+    }
+
     @SuppressWarnings("VisibleForTests")
     private class UploadPostTask extends AsyncTask<Bitmap, Void, Void> {
 
         @Override
         protected Void doInBackground(Bitmap... params) {
-            StorageReference storageRef = storage.getReferenceFromUrl("gs://lab07-74361.appspot.com/");
+            StorageReference storageRef = storage.getReferenceFromUrl("gs://crimenapp-15fed.appspot.com/");
 
             Bitmap bitmap = params[0];
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -162,13 +176,14 @@ public class MainActivity extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             if (taskSnapshot.getDownloadUrl() != null) {
                                 String imageUrl = taskSnapshot.getDownloadUrl().toString();
-                                final Message message = new Message(imageUrl);
+                                /*final Message message = new Message(imageUrl);
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
                                         messagesAdapter.addMessage(message);
                                     }
-                                });
+                                });*/
+                                urlImage = imageUrl;
                             }
                         }
                     });

@@ -8,6 +8,8 @@ public class Message {
 
     private String message, user, imageUrl;
 
+    private Double latitud, longitud;
+
     public Message() {
     }
 
@@ -37,6 +39,22 @@ public class Message {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public Double getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(Double latitud) {
+        this.latitud = latitud;
+    }
+
+    public Double getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(Double longitud) {
+        this.longitud = longitud;
     }
 
     @Override
